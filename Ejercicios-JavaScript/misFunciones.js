@@ -268,4 +268,10 @@ function animarAuto() {
         x=0
     }
     x+=dx;
+
+
+
+
 }
+
+
