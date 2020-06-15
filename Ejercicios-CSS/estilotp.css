@@ -1,0 +1,15 @@
+form{
+    width: 100%;
+}
+
+body {
+    text-align: left;
+    background: #e7ffee;
+}
+div{
+    border: 1px dashed #081140;
+    margin: 10px;
+    padding: 5px 60px;
+    border-radius: 15px;
+    box-shadow: 1px 4px #081140;
+}
