@@ -234,8 +234,10 @@ function dibujarimagen(posX, posY) {
     canvas.width = canvas.width;
 
 
+
+
     var img = new Image();
-    img.src = "images/auto.png";
+    img.src = "images/hola.png";
 
 
     img.onload = function(){
@@ -256,7 +258,7 @@ function animarAuto() {
 
 
     var img = new Image();
-    img.src = "images/auto.png";
+    img.src = "images/hola.png";
 
 
     img.onload = function(){

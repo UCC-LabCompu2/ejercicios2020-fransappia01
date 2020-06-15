@@ -49,7 +49,33 @@ function Score(){
 
 
 
-function animarFoto() {
+
+function db(posX, posY) {
+
+
+    var canvas = document.getElementById("myCanvas")
+    var ctx = canvas.getContext("2d")
+
+    canvas.width = canvas.width;
+
+
+
+
+    var img = new Image();
+    img.src = "images/hola.png";
+
+
+    img.onload = function(){
+        ctx.drawImage(img,posX, posY);
+    }
+
+
+}
+x=0;
+dx=2;
+
+
+function a() {
 
     var canvas = document.getElementById("myCanvas")
     var ctx = canvas.getContext("2d")
@@ -58,7 +84,7 @@ function animarFoto() {
 
 
     var img = new Image();
-    img.src = "images/auto.png ";
+    img.src = "images/hola.png";
 
 
     img.onload = function(){
