@@ -28,12 +28,12 @@ function Score(){
             answertext=answertext+explicares[i]+"\n";
         }
         else{
-            answertext=answertext+"bien\n";
+            answertext=answertext+"Correcto\n";
             calif++;
         }}
-    answertext=answertext+"\nCalificacion:"+calif;
-    answertext=answertext+"\nDiagnostico:";
-    if(calif>=0){
+    answertext=answertext+"\nCantidad de respuestas acertadas:"+calif;
+    answertext=answertext+"\nDiagnostico: ";
+    if(calif===0){
         answertext=answertext+"Mal";
     }
     if(calif>=1&&calif<=2){
