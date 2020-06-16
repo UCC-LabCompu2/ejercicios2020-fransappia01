@@ -3,117 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Canvas con Circulo y Cuadrado</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link href="estilotp.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
+    <link href="miEstilo.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="misFunciones.js"></script>
 </head>
 
-<body onload="setInterval(a, 10)">
+<body onload="setInterval(animarAuto, 10)">
 
 
 <canvas id="myCanvas" class="ejer" width="1000px" height="500px">
 
 </canvas>
 
-
-<div>
-
-    <img id="foto" src="imagenes/logo-ucc-2018%20(1).svg">
-    <h1><b>Parcial Laboratorio de Computación 2020</b></h1>
-</div>
-<div>
-    <h3> <u>Auto-Evaluación de Práctica</u></h3>
-</div>
-<div>
-    <h5>
-        Completar con tus datos para poder realizar el examen
-    </h5>
-    <form>
-
-        <div class="form-group">
-
-            <b><label for="input_nombre">Nombre:</label></b>
-
-
-            <input type="text" class="form-control" id="input_nombre" aria-describedby="nombre" placeholder="Ingrese su Nombre">
-        </div>
-
-        <div class="form-group">
-
-
-            <b>
-                <label for="input_apellido">Apellido:</label>
-            </b>
-
-
-            <input type="text" class="form-control" id="input_apellido" aria-describedby="apellido" placeholder="Ingrese su Apellido">
-
-        </div>
-
-        <div class="form-group">
-
-
-            <b><label for="input_clave"> Clave:</label></b>
-
-
-            <input type="text" class="form-control" id="input_clave" aria-describedby="clave" placeholder="Clave">
-
-        </div>
-
-        <div class="form-group">
-
-            <b>
-                <label for="input_fecha">Fecha:</label>
-            </b>
-
-            <input type="date" class="form-control" id="input_fecha" aria-describedby="fecha" placeholder="Fecha">
-        </div>
-        <h3><b>Evaluacion Laboratorio Computacion</b></h3>
-        <h5>Marque la opción correcta</h5>
-
-
-        <div>
-            <p><b>1.-¿Que es CSS?</b></p>
-            <p><input type="radio" name="R1" value="a" onclick="Resp(1,this.value)"/>a)Cascading Style Sheets </p>
-            <p><input type="radio" name="R1" value="b" onclick="Resp(1,this.value)"/>b)Coronal Standard Style </p>
-            <p><input type="radio" name="R1" value="c" onclick="Resp(1,this.value)"/>c)Cardinal Style Standard </p>
-
-
-            <p><b>2.-¿Podemos modificar CSS mediante Javascript?</b></p>
-            <p><input type="radio" name="R2" value="a" onclick="Resp(2,this.value)"/>a)Si </p>
-            <p><input type="radio" name="R2" value="b" onclick="Resp(2,this.value)"/>b)No </p>
-            <p><input type="radio" name="R2" value="c" onclick="Resp(2,this.value)"/>c)En algunos casos </p>
-
-
-            <p><b>3.-¿Que significan las siglas HTML?</b></p>
-            <p><input type="radio" name="R3" value="a" onclick="Resp(3,this.value)"/>a)High Text Media Language </p>
-            <p><input type="radio" name="R3" value="b" onclick="Resp(3,this.value)"/>b)Nada </p>
-            <p><input type="radio" name="R3" value="c" onclick="Resp(3,this.value)"/>c) Hyper Text Markup Language</p>
-
-
-            <p><b>4.-¿Que es Git?</b></p>
-            <p><input type="radio" name="R4" value="a" onclick="Resp(4,this.value)"/>a)Una app </p>
-            <p><input type="radio" name="R4" value="b" onclick="Resp(4,this.value)"/>b)Sistema distribuido de control de versiones</p>
-            <p><input type="radio" name="R4" value="c" onclick="Resp(4,this.value)"/>c)Un sistema operativo para moviles</p>
-
-
-            <p><b>5.-¿Cual NO es un servidor de Git?</b></p>
-            <p><input type="radio" name="R5" value="a" onclick="Resp(5,this.value)"/>a)Gitmarket </p>
-            <p><input type="radio" name="R5" value="b" onclick="Resp(5,this.value)"/>b)Github </p>
-            <p><input type="radio" name="R5" value="c" onclick="Resp(5,this.value)"/>c)Gitlab </p>
-
-
-            <br></div>
-
-        <input type="button"  name="RESULTADOS" value="RESULTADOS" onclick="Score()"/>
-
-
-
-        <script src="funciontest.js"></script>
 
 
 </body>

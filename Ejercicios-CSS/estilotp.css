@@ -13,3 +13,30 @@ div{
     border-radius: 15px;
     box-shadow: 1px 4px #081140;
 }
+
+#datos1{
+
+    color: #1f1bff;
+
+
+   }
+#datos2{
+
+    color: #2525ba;
+}
+
+#datos3{
+
+    color: #1029ad;
+}
+
+#datos4{
+
+    color: blue;
+}
+
+#Evaluacion{
+
+    color: black;
+    text-align: left;
+}
