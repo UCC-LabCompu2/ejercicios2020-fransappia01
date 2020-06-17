@@ -1,87 +1,58 @@
 /*Titulos*/
-h1{
-    font-family: 'Inknut Antiqua', serif;
-    line-height: 130%;
+
+
+form{
+    width: 100%;
 }
 
-.body-num{
-    background: url("images/fondo_numeros.jpg");
-    background-size: cover;
+body {
+    text-align: left;
+    background: #e7ffee;
+}
+div{
+    border: 1px dashed #081140;
+    margin: 10px;
+    padding: 5px 60px;
+    border-radius: 15px;
+    box-shadow: 1px 4px #081140;
 }
 
-.centrado{
-    margin: auto;
-}
+#datos1{
 
-.div-conver{
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    border-radius: 20px;
-    max-width: 430px;
-    text-align: center;
-    margin: 10px auto;
-    padding: 10px 10px;
+    color: #1f1bff;
+
 
 }
+#datos2{
 
-.color-div{
-    background: #feab5a;
-    max-width: 500px;
+    color: #2525ba;
 }
 
-.operacionesMat input{
-    max-width: 40px;
+#datos3{
+
+    color: #1029ad;
 }
 
-/*Formulario*/
-input{
-    border-radius: 2px;
-    box-shadow: 5px 5px 10px #7a8aac;
+#datos4{
+
+    color: blue;
 }
 
-input:focus {
-    border-color: #19ac67;
+#Evaluacion{
+
+    color: black;
+    text-align: left;
 }
 
-.ejer{
-    border:1px solid #000000;
-    background: rgba(240, 255, 105, 0.47);
+footer{
 
+
+    text-align: right;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    border: 1px solid #555;
-}
+#foto{
 
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 10px;
-}
 
-li {
-    text-align: center;
-    border-bottom: 1px solid #555;
-}
+    height: 250px;
 
-li:last-child {
-    border-bottom: none;
-}
-
-li a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
 }

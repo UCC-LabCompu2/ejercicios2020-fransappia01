@@ -3,19 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <title>Canvas con Circulo y Cuadrado</title>
-    <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="miEstilo.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="misFunciones.js"></script>
 </head>
 
-<body onload="setInterval(animarAuto, 10)">
+<body onload="setInterval(a, 10)">
 
 
-<canvas id="myCanvas" class="ejer" width="1000px" height="500px">
+<canvas id="myCanvas" class="ejer" width="400px" height="400px">
 
 </canvas>
 
+<div>
+
+    <img id="foto" src="images/LOGO_UCC.png" alt=" ">
+    <h1><b>Parcial Laboratorio de Computación 2020</b></h1>
+</div>
+<div id="Evaluacion">
+    <h3> <u>Auto-Evaluación de Práctica</u></h3>
+</div>
+<div>
+    <h5>
+        Completar con tus datos para poder realizar el examen
+    </h5>
+
+
+    <form>
+
+        <div id="datos1" class="form-group">
+
+            <b><label for="input_nombre">Nombre:</label></b>
+
+
+            <input type="text" class="form-control" id="input_nombre" aria-describedby="nombre" placeholder="Ingrese su Nombre">
+        </div>
+
+        <div id="datos2" class="form-group">
+
+
+            <b>
+                <label for="input_apellido">Apellido:</label>
+            </b>
+
+
+            <input type="text" class="form-control" id="input_apellido" aria-describedby="apellido" placeholder="Ingrese su Apellido">
+
+        </div>
+
+        <div id="datos3" class="form-group">
+
+
+            <b><label for="input_clave"> Clave:</label></b>
+
+
+            <input type="text" class="form-control" id="input_clave" aria-describedby="clave" placeholder="Clave">
+
+        </div>
+
+        <div id="datos4" class="form-group">
+
+            <b>
+                <label for="input_fecha">Fecha:</label>
+            </b>
+
+            <input type="date" class="form-control" id="input_fecha" aria-describedby="fecha" placeholder="Fecha">
+        </div>
+        <h3><b>Evaluacion Laboratorio Computacion</b></h3>
+        <h5>Marque la opción correcta</h5>
+
+
+        <div>
+            <p><b>1.-¿Que es CSS?</b></p>
+            <p><input type="radio" name="R1" value="a" onclick="Resp(1,this.value)"/>a)Cascading Style Sheets </p>
+            <p><input type="radio" name="R1" value="b" onclick="Resp(1,this.value)"/>b)Coronal Standard Style </p>
+            <p><input type="radio" name="R1" value="c" onclick="Resp(1,this.value)"/>c)Cardinal Style Standard </p>
+
+
+            <p><b>2.-¿Podemos modificar CSS mediante Javascript?</b></p>
+            <p><input type="radio" name="R2" value="a" onclick="Resp(2,this.value)"/>a)Si </p>
+            <p><input type="radio" name="R2" value="b" onclick="Resp(2,this.value)"/>b)No </p>
+            <p><input type="radio" name="R2" value="c" onclick="Resp(2,this.value)"/>c)En algunos casos </p>
+
+
+            <p><b>3.-¿Que significan las siglas HTML?</b></p>
+            <p><input type="radio" name="R3" value="a" onclick="Resp(3,this.value)"/>a)High Text Media Language </p>
+            <p><input type="radio" name="R3" value="b" onclick="Resp(3,this.value)"/>b)Nada </p>
+            <p><input type="radio" name="R3" value="c" onclick="Resp(3,this.value)"/>c) Hyper Text Markup Language</p>
+
+
+            <p><b>4.-¿Que es Git?</b></p>
+            <p><input type="radio" name="R4" value="a" onclick="Resp(4,this.value)"/>a)Una app </p>
+            <p><input type="radio" name="R4" value="b" onclick="Resp(4,this.value)"/>b)Sistema distribuido de control de versiones</p>
+            <p><input type="radio" name="R4" value="c" onclick="Resp(4,this.value)"/>c)Un sistema operativo para moviles</p>
+
+
+            <p><b>5.-¿Cual NO es un servidor de Git?</b></p>
+            <p><input type="radio" name="R5" value="a" onclick="Resp(5,this.value)"/>a)Gitmarket </p>
+            <p><input type="radio" name="R5" value="b" onclick="Resp(5,this.value)"/>b)Github </p>
+            <p><input type="radio" name="R5" value="c" onclick="Resp(5,this.value)"/>c)Gitlab </p>
+
+        </div>
+    </form>
+</div>
+
+
+<br></div>
+
+<input type="button"  name="RESULTADOS" value="RESULTADOS" onclick="Score()"/>
+
+
+</div>
 
 
 </body>
+<footer>
+    Copyright &copy; 2020 |Oechsle Sappia Proyectos 2020
+</footer>
+
 </html>

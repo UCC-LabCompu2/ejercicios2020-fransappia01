@@ -1,233 +1,84 @@
 /**
- * Created by Agus on 6/5/2017.
+ * Created by Fran y lucas .
  */
+
+var res=new Array;
+var no=new Array;
+var tures=new Array;
+var explicares=new Array;
+var calif=0;
+
+res[1]="a";//res = respuesta
+res[2]="a";
+res[3]="c";
+res[4]="b";
+res[5]="a";
+
+explicares[1]="Mal,la respuesta correcta es a";
+explicares[2]="Mal,la respuesta correcta es a";
+explicares[3]="Mal,la respuesta correcta es c";
+explicares[4]="Mal,la respuesta correcta es b";
+explicares[5]="Mal,la respuesta correcta es a";
 
 /**
- * Conversion de unidades, de metros, yardas, pulgadas y pies.
- * @method CambiarUnidades
- * @param {string} id - El id de los inputs de metros, yardas, pies o pulgadas.
- * @param {number} valor - El valor de los inputs de metros, yardas, pies o pulgadas.
+ * Funcion  de calcular Notas.
+ * @method Resp.
+ * @param {string} question - la pregunta.
+ * @param {string} answer - La respuesta.
  * @return
  */
-function CambiarUnidades(id, valor) {
-    var metro, pulgada, yarda, pie;
-    if (valor.includes(",")){
-            valor = valor.replace(",",".");
 
-    }
-    if (isNaN(valor)) {
-        alert("Se ingreso un valor invalido" + id);
-
-        metro = "";
-        pulgada = "";
-        pie = "";
-        yarda = "";
-
-    } else if (id == "metro") {
-        metro = valor;
-        pulgada = 39.3701 * valor;
-        pie = 3.28084 * valor;
-        yarda = 1.09361 * valor;
-
-    } else if (id == "pulgada") {
-        pulgada = valor;
-        metro = 0.0254 * valor;
-        pie = 0.0833333 * valor;
-        yarda = 1.09361 * valor;
-
-    } else if (id == "yarda") {
-        yarda = valor;
-        pulgada = 36 * valor;
-        pie = 3 * valor;
-        metro = 0.9144 * valor;
-    } else if (id == "pie") {
-        pie = valor;
-        pulgada = 12 * valor;
-        metro = 0.3048 * valor;
-        yarda = 0.333333;
-    }
-
-    document.lasUnidades.unid_metro.value = Math.round(metro*100)/100;
-    document.lasUnidades.unid_pie.value = Math.round(pie*100)/100;
-    document.lasUnidades.unid_pulgada.value = Math.round(pulgada*100)/100;
-    document.lasUnidades.unid_yarda.value = Math.round(yarda*100)/100;
+function Resp(question,answer){
+    tures[question]=answer;
 }
-    function convertirGR(id) {
-        var grad, rad;
-        if (id == "grados") {
-            grad = document.getElementById("grados").value;
-            rad = (grad * Math.PI) / 180;
 
-        } else if (id == "radianes") {
-            rad = document.getElementById("radianes").value;
-            grad = (rad * 180) / Math.PI
+/**
+ * Funcion  de resultado.
+ * @method Score.
+ * @param: none.
+ * @param: none.
+ * @return
+ */
+
+
+function Score(){
+    var answertext="RESULTADOS\n";
+    calif=0;
+    for(i=1;i<=5;i++){
+        answertext=answertext+"\nPregunta"+i+".";
+        if(res[i]!==tures[i]){
+            answertext=answertext+explicares[i]+"\n";
         }
-        document.getElementById("grados").value = grad;
-        document.getElementById("radianes").value = rad;
+        else{
+            answertext=answertext+"Correcto\n";
+            calif++;
+        }}
+    answertext=answertext+"\nCantidad de respuestas acertadas:"+calif;
+    answertext=answertext+"\nDiagnostico: ";
+    if(calif===0){
+        answertext=answertext+"Mal";
     }
-
-    function mostrar_ocultar(valorMO) {
-
-        if (valorMO == "val_mostrar") {
-            document.getElementById("divMO").style.display = 'block';
-        } else if (valorMO == "val_ocultar") {
-            document.getElementById("divMO").style.display = 'none';
-        }
+    if(calif>=1&&calif<=2){
+        answertext=answertext+"Regular";
     }
-
-    function calcularSuma() {
-        var num1, num2;
-
-        num1 = document.getElementsByName("sum_num1")[0].value;
-        num2 = document.getElementsByName("sum_num2")[0].value;
-        document.getElementsByName("sum_total")[0].innerHTML = Number(num1) + Number(num2);
+    if(calif>=3&&calif<=4){
+        answertext=answertext+"Bueno";
     }
-
-    function calcularResta() {
-        var num1, num2;
-
-        num1 = document.getElementsByName("res_num1")[0].value;
-        num2 = document.getElementsByName("res_num2")[0].value;
-        document.getElementsByName("res_total")[0].innerHTML = Number(num1) - Number(num2);
-
+    if(calif>=5){
+        answertext=answertext+"Excelente";
     }
-
-    function calcularMul() {
-        var num1, num2;
-
-        num1 = document.getElementsByName("mul_num1")[0].value;
-        num2 = document.getElementsByName("mul_num2")[0].value;
-        document.getElementsByName("mul_total")[0].innerHTML = Number(num1) * Number(num2);
-
-    }
-
-    function calcularDivi() {
-        var num1, num2;
-
-        num1 = document.getElementsByName("div_num1")[0].value;
-        num2 = document.getElementsByName("div_num2")[0].value;
-        document.getElementsByName("div_total")[0].innerHTML = Number(num1) / Number(num2);
-
-    }
-function cargarWeb() {
-
-    var cant, unidad, urlComp;
-
-    cant = document.getElementById("distancia").value;
-    unidad = document.getElementsByName("unidades")[0].value;
-    urlComp = "segundaWeb.html#" + cant + "#" + unidad;
-
-    window.open(urlComp);
-}
-
-function cargarResultado() {
-    var urlComp, can, un;
-
-    urlComp = window.location.href.split("/")[5];
-    can = urlComp.split("#")[1];
-    un =  urlComp.split("#")[2];
-
-    document.getElementById("dist").value = can + " " + un;
-
-}
-
-function DibujarCirCuad() {
-
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-    var xMax = canvas.width;
-    var yMax = canvas.height;
-    var margen = 5;
-    ctx.fillStyle = "#cb0d12";
-    ctx.fillRect(0+margen,yMax-40-margen, 40, 40);
-
-    ctx.arc(xMax/2, yMax/2, 20, 0, 2*Math.PI);
-    ctx.stroke();
-    ctx.fillStyle = "#344389";
-    ctx.fill();
-}
-
-var bandera;
-function dibujar(event) {
-
-    var canvas = document.getElementById("canvasAdibujar");
-    var ctx = canvas.getContext("2d");
-
-    var posX = event.clientX;
-    var posY = event.clientY;
-    console.log(posX, posY);
-
-    canvas.onmousedown = function () {bandera=true};
-    canvas.onmouseup = function () {bandera=false};
-
-    if (bandera){
-
-    ctx.fillRect(posX, posY, 5, 5);
-    ctx.fill;
-    }
-
-}
-
-function limpiarCanvas() {
-    var canvas = document.getElementById("canvasAdibujar");
-    var ctx = canvas.getContext("2d");
-
-    canvas.width = canvas.width;
-}
+    alert(answertext);}
 
 
 
-function dibujarCuadriculado() {
-
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-
-    var anchoMax = canvas.width;
-    var alturaMax = canvas.height;
-
-    // Dibujar lineas horizontales
-    ctx.beginPath();
-    for (var i=0;i<alturaMax;){
-    ctx.moveTo(0, i);
-    ctx.lineTo(anchoMax, i);
-    ctx.strokeStyle = "#0cf804";
-    ctx.stroke();
-    i = i+20;
-    }
-    ctx.closePath();
-
-    //Dinujar lineas verticales
-    ctx.beginPath();
-    for (var i=0;i<anchoMax;){
-        ctx.moveTo(i, 0);
-        ctx.lineTo(i, alturaMax);
-        ctx.strokeStyle = "#0cf804";
-        ctx.stroke();
-        i = i+20;
-    }
-    ctx.closePath();
-
-    //eje x
-    ctx.beginPath();
-
-    ctx.moveTo(0, alturaMax/2);
-    ctx.lineTo(anchoMax, alturaMax/2);
-        ctx.strokeStyle = "#05084e";
-        ctx.stroke();
-    ctx.closePath();
-
-    //eje y
-    ctx.beginPath();
-
-    ctx.moveTo(anchoMax/2, 0);
-    ctx.lineTo (anchoMax/2, alturaMax);
-    ctx.strokeStyle = "#4e0507";
-    ctx.stroke();
-    ctx.closePath();
-}
-
-
-function dibujarimagen(posX, posY) {
+/**
+ * Funcion  de dibujo.
+ * @method db.
+ * @param: {number} posX posicion y.
+ * @param: {number} posY posicion x.
+ * @return
+ */
+function db(posX, posY) {
 
     var canvas = document.getElementById("myCanvas")
     var ctx = canvas.getContext("2d")
@@ -237,7 +88,7 @@ function dibujarimagen(posX, posY) {
 
 
     var img = new Image();
-    img.src = "images/hola.png";
+    img.src = "images/Test.png";
 
 
     img.onload = function(){
@@ -249,7 +100,14 @@ function dibujarimagen(posX, posY) {
 x=0;
 dx=2;
 
-function animarAuto() {
+/**
+ * Funcion  de animacion
+ * @method a.
+ * @param: none.
+ * @param: none.
+ * @return
+ */
+function a() {
 
     var canvas = document.getElementById("myCanvas")
     var ctx = canvas.getContext("2d")
@@ -258,7 +116,7 @@ function animarAuto() {
 
 
     var img = new Image();
-    img.src = "images/hola.png";
+    img.src = "images/Test.png";
 
 
     img.onload = function(){
@@ -275,5 +133,6 @@ function animarAuto() {
 
 
 }
+
 
 
