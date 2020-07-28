@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<header>
+    <h4>Comunidad UCC</h4>
+</header>
 <head>
     <meta charset="UTF-8">
-    <title>Canvas con Circulo y Cuadrado</title>
+    <title>Proyecto con canvas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="miEstilo.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="misFunciones.js"></script>
@@ -11,9 +14,7 @@
 <body onload="setInterval(a, 10)">
 
 
-<canvas id="myCanvas" class="ejer" width="400px" height="400px">
 
-</canvas>
 
 <div>
 
@@ -103,17 +104,37 @@
             <p><input type="radio" name="R5" value="b" onclick="Resp(5,this.value)"/>b)Github </p>
             <p><input type="radio" name="R5" value="c" onclick="Resp(5,this.value)"/>c)Gitlab </p>
 
-        </div>
-    </form>
-</div>
 
-
-<br></div>
+        <br>
 
 <input type="button"  name="RESULTADOS" value="RESULTADOS" onclick="Score()"/>
+        </div>
 
+
+
+</form>
+    <div id="respuestass">
+        <div  id="porcentaje">
+            RESPUESTAS CORRECTAS:<input id="f1" type="text">
+            <button id="boton_porcentaje" onclick="Grafico(porcentaje())">Ver</button>
+        </div>
+
+
+        <h5>PORCENTAJE DE APROBACION</h5>
+        <canvas id="myCanvas" class="Canvas">
+
+        </canvas>
+        <canvas id="miCanvas4" class="ejer" width="400px" height="400px">
+
+        </canvas>
+    </div>
+</div>
+</div>
 
 </div>
+
+
+
 
 
 </body>
