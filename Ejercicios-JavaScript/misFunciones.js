@@ -171,43 +171,30 @@ function porcentaje() {
 
 function Grafico(respuesta) {
 
-    var stop = setInterval(animar,10);
 
-    Grafico.porc=0;
-    dr=0.01;
-    porciento=Total;
-    relleno=calif*20;
-
-    function animar(){
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
 
-        porcientoG=Math.round(Grafico.porc*calif)/5;
 
-        if(Grafico.porc>relleno){
-            clearInterval(stop);
-        }else{
-            Grafico.porc+=dr;
-        }
         limpiarCanvas();
         ctx.beginPath();
-        ctx.fillRect(50,50,3000,1000);
-        ctx.lineWidth = 7;
+        ctx.fillRect(50,0,3000,100);
+        ctx.lineWidth = 15;
         ctx.lineCap = 'round';
         ctx.fillStyle = "#black";
         ctx.stroke();
         ctx.closePath()
 
         ctx.beginPath();
-        ctx.fillRect(50,50,100,100)
+        ctx.fillRect(50,50,3000,-100)
         ctx.lineWidth = 15;
         ctx.lineCap = 'round';
-        ctx.fillStyle = "#07f8e4";
+        ctx.fillStyle = "#0f07f8";
         ctx.stroke();
         ctx.font = "bold 50px sans-serif";
-        ctx.fillText(Math.round(calif*20)+"%",140,120);
+        ctx.fillText(Math.round(calif*20)+"%",140,70);
         ctx.closePath();
-    }
+
 }
 
 
