@@ -157,7 +157,6 @@ function porcentaje() {
     if (respuesta = 4) Total = 80;
     if (respuesta = 5) Total = 100;
 
-    else alert("Numero erroneo");
 
     return Total;
 }
